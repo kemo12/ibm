@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="name"> Name</string>
+    <string name="username"> Username</string>
+    <string name="password"> Password</string>
+    <string name="repassword"> Re-password</string>
+    <string name="email"> E-Mail</string>
+    <string name="WELCOME"> Welcome Back</string>
+    <string name="LOGIN"> LOGE IN</string>
+    <string name="signup"> Sign Up</string>
+    <string name="note1"> If you already have account, log in</string>
+    <string name="note2">You Don\'t Have An Account?</string>
+    <string name="note3"> If Don\'t you already have account.</string>
+    <string name="creatnew"> Creat New Account</string>
+    <string name="creat">CREATE</string>
+    <string name="note4">You Have An Account?</string>
+    <string name="Complete_Information">Complete Your Information</string>
+    <string name="weight">Weight</string>
+    <string name="length">Length</string>
+    <string name="date_birth">Date Of Birth</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="kg">kg</string>
+    <string name="cm">cm</string>
+    <string name="save_data">SAVE DATA</string>
+    <string name="new_recorf">New Record</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="saveData">SAVE DATA</string>
+</resources>
