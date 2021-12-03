@@ -8,12 +8,12 @@
     tools:context=".NewRecodr">
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/kg_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:text="@string/new_recorf"
-        android:textColor="@color/bluee"
+        android:textColor="@color/custom_color"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,18 +21,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/cm_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="@string/weight"
-        android:textColor="@color/bluee"
+        android:textColor="@color/custom_color"
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.099"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/kg_tv" />
 
     <TextView
         android:id="@+id/textView14"
@@ -40,12 +40,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="@string/length"
-        android:textColor="@color/bluee"
+        android:textColor="@color/custom_color"
         android:textSize="17sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textView13"
-        app:layout_constraintStart_toStartOf="@+id/textView13"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintEnd_toEndOf="@+id/cm_tv"
+        app:layout_constraintStart_toStartOf="@+id/cm_tv"
+        app:layout_constraintTop_toBottomOf="@+id/cm_tv" />
 
     <TextView
         android:id="@+id/textView15"
@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="@string/date"
-        android:textColor="@color/bluee"
+        android:textColor="@color/custom_color"
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView14"
@@ -66,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="@string/time"
-        android:textColor="@color/bluee"
+        android:textColor="@color/custom_color"
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView15"
@@ -74,7 +74,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/newRecord_kg_minus_bt"
         android:layout_width="20sp"
         android:layout_height="20sp"
         android:layout_marginStart="70dp"
@@ -83,35 +83,35 @@
         android:text="-"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="@color/bluee"
+        android:textColor="@color/custom_color"
         android:textSize="17sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView13"
-        app:layout_constraintStart_toEndOf="@+id/textView13"
-        app:layout_constraintTop_toTopOf="@+id/textView13" />
+        app:layout_constraintBottom_toBottomOf="@+id/cm_tv"
+        app:layout_constraintStart_toEndOf="@+id/cm_tv"
+        app:layout_constraintTop_toTopOf="@+id/cm_tv" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/new_kg_tv"
         android:layout_width="70sp"
         android:layout_height="20sp"
         android:background="@drawable/standblue_bt"
-        app:layout_constraintBottom_toBottomOf="@+id/textView13"
-        app:layout_constraintStart_toEndOf="@+id/textView17"
-        app:layout_constraintTop_toTopOf="@+id/textView13" />
+        app:layout_constraintBottom_toBottomOf="@+id/cm_tv"
+        app:layout_constraintStart_toEndOf="@+id/newRecord_kg_minus_bt"
+        app:layout_constraintTop_toTopOf="@+id/cm_tv" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/newRecord_kg_plus_bt"
         android:layout_width="20sp"
         android:layout_height="20sp"
         android:background="@drawable/standblue_bt"
         android:text="+"
         android:textAlignment="center"
-        android:textColor="@color/bluee"
+        android:textColor="@color/custom_color"
         android:textSize="17sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView13"
-        app:layout_constraintStart_toEndOf="@+id/textView20"
-        app:layout_constraintTop_toTopOf="@+id/textView13" />
+        app:layout_constraintBottom_toBottomOf="@+id/cm_tv"
+        app:layout_constraintStart_toEndOf="@+id/new_kg_tv"
+        app:layout_constraintTop_toTopOf="@+id/cm_tv" />
 
     <TextView
         android:id="@+id/textView25"
@@ -119,57 +119,57 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:text="@string/kg"
-        android:textColor="@color/bluee"
+        android:textColor="@color/custom_color"
         android:textSize="17sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView21"
+        app:layout_constraintBottom_toBottomOf="@+id/newRecord_kg_plus_bt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView21"
-        app:layout_constraintTop_toTopOf="@+id/textView21"
+        app:layout_constraintStart_toEndOf="@+id/newRecord_kg_plus_bt"
+        app:layout_constraintTop_toTopOf="@+id/newRecord_kg_plus_bt"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView26"
+        android:id="@+id/newRecord_cm_plus_bt"
         android:layout_width="20sp"
         android:layout_height="20sp"
         android:background="@drawable/standblue_bt"
         android:text="+"
         android:textAlignment="center"
-        android:textColor="@color/bluee"
+        android:textColor="@color/custom_color"
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView14"
-        app:layout_constraintEnd_toEndOf="@+id/textView21"
-        app:layout_constraintStart_toEndOf="@+id/textView27"
+        app:layout_constraintEnd_toEndOf="@+id/newRecord_kg_plus_bt"
+        app:layout_constraintStart_toEndOf="@+id/new_cm_tv"
         app:layout_constraintTop_toTopOf="@+id/textView14" />
 
     <TextView
-        android:id="@+id/textView27"
+        android:id="@+id/new_cm_tv"
         android:layout_width="70sp"
         android:layout_height="20sp"
         android:background="@drawable/standblue_bt"
         android:textAlignment="center"
-        android:textColor="@color/bluee"
+        android:textColor="@color/custom_color"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView14"
-        app:layout_constraintEnd_toEndOf="@+id/textView20"
-        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintEnd_toEndOf="@+id/new_kg_tv"
+        app:layout_constraintStart_toStartOf="@+id/new_kg_tv"
         app:layout_constraintTop_toTopOf="@+id/textView14" />
 
     <TextView
-        android:id="@+id/textView28"
+        android:id="@+id/newRecord_cm_minus_bt"
         android:layout_width="20sp"
         android:layout_height="20sp"
         android:background="@drawable/standblue_bt"
         android:text="-"
         android:textAlignment="center"
-        android:textColor="@color/bluee"
+        android:textColor="@color/custom_color"
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView14"
-        app:layout_constraintEnd_toEndOf="@+id/textView17"
-        app:layout_constraintStart_toStartOf="@+id/textView17"
+        app:layout_constraintEnd_toEndOf="@+id/newRecord_kg_minus_bt"
+        app:layout_constraintStart_toStartOf="@+id/newRecord_kg_minus_bt"
         app:layout_constraintTop_toTopOf="@+id/textView14" />
 
     <TextView
@@ -179,12 +179,12 @@
         android:layout_marginStart="4dp"
         android:text="@string/cm"
         android:textAlignment="center"
-        android:textColor="@color/bluee"
+        android:textColor="@color/custom_color"
         android:textSize="17sp"
         android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView14"
         app:layout_constraintEnd_toEndOf="@+id/textView25"
-        app:layout_constraintStart_toEndOf="@+id/textView26"
+        app:layout_constraintStart_toEndOf="@+id/newRecord_cm_plus_bt"
         app:layout_constraintTop_toTopOf="@+id/textView14" />
 
     <EditText
@@ -220,7 +220,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
         android:layout_marginTop="50dp"
-        android:background="@color/bluee"
+        android:background="@color/custom_color"
         android:fontFamily="sans-serif-black"
         android:text="@string/saveData"
         android:textColor="@color/white"

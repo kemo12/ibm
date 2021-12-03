@@ -13,6 +13,10 @@
             android:name=".complete_information"
             android:exported="false" />
         <activity
+            android:name=".list_status"
+            android:exported="false" />
+
+        <activity
             android:name=".MainActivity3"
             android:exported="false" />
         <activity
