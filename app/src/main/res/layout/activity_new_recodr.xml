@@ -215,7 +215,7 @@
         app:layout_constraintTop_toTopOf="@+id/textView16" />
 
     <Button
-        android:id="@+id/savedata2"
+        android:id="@+id/save_data_newRecord"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"

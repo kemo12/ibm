@@ -19,12 +19,16 @@
         <entry key="..\:/Users/compulife/Desktop/ibm/app/src/main/res/drawable/home_activity.xml" value="0.33" />
         <entry key="..\:/Users/compulife/Desktop/ibm/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
         <entry key="..\:/Users/compulife/Desktop/ibm/app/src/main/res/drawable/standblue_bt.xml" value="0.2203125" />
+        <entry key="..\:/Users/compulife/Desktop/ibm/app/src/main/res/layout/activity_add_food.xml" value="0.25" />
         <entry key="..\:/Users/compulife/Desktop/ibm/app/src/main/res/layout/activity_complete_information.xml" value="0.22" />
-        <entry key="..\:/Users/compulife/Desktop/ibm/app/src/main/res/layout/activity_list_status.xml" value="0.11730072463768115" />
+        <entry key="..\:/Users/compulife/Desktop/ibm/app/src/main/res/layout/activity_edit_food.xml" value="0.17" />
+        <entry key="..\:/Users/compulife/Desktop/ibm/app/src/main/res/layout/activity_food_list.xml" value="0.17" />
+        <entry key="..\:/Users/compulife/Desktop/ibm/app/src/main/res/layout/activity_list_status.xml" value="0.18" />
         <entry key="..\:/Users/compulife/Desktop/ibm/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/compulife/Desktop/ibm/app/src/main/res/layout/activity_main2.xml" value="0.22" />
         <entry key="..\:/Users/compulife/Desktop/ibm/app/src/main/res/layout/activity_main3.xml" value="0.25" />
         <entry key="..\:/Users/compulife/Desktop/ibm/app/src/main/res/layout/activity_new_recodr.xml" value="0.33" />
+        <entry key="..\:/Users/compulife/Desktop/ibm/app/src/main/res/layout/custom_food_info.xml" value="0.1743659420289855" />
         <entry key="..\:/Users/compulife/Desktop/ibm/app/src/main/res/layout/custom_status_layout.xml" value="0.11730072463768115" />
         <entry key="..\:/Users/compulife/Desktop/ibm/app/src/main/res/layout/home_activity.xml" value="0.33" />
       </map>

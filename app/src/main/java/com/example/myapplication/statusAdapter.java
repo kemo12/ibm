@@ -72,4 +72,9 @@ public class statusAdapter extends BaseAdapter {
 
         return v;
     }
+
+    public void addItem(customStatus s1) {
+        this.state.add(s1);
+
+    }
 }

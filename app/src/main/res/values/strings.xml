@@ -28,4 +28,10 @@
     <string name="date">Date</string>
     <string name="time">Time</string>
     <string name="saveData">SAVE DATA</string>
+    -<string-array name="catagory">
+    <item>Fish</item>
+    <item>Fruit</item>
+    <item>Carbohydrates</item>
+    <item>Proteins</item>
+</string-array>
 </resources>

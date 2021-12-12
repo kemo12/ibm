@@ -14,7 +14,6 @@
         android:layout_marginTop="20dp"
         android:text="Hi, Mohammed"
         android:textAlignment="center"
-        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +45,7 @@
         android:layout_marginEnd="40dp"
         android:background="@drawable/standblue_bt"
         android:textAlignment="center"
-        android:textColor="@color/custom_color"
+        android:textColor="#3A3D40"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +74,7 @@
         android:layout_height="300dp"
         android:layout_centerInParent="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="10dp"
         android:background="@color/custom_color"
         android:foregroundGravity="center"
@@ -83,13 +82,14 @@
         android:padding="10dp"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView30">
 
     </ListView>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/status__list_add_food_bt"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
@@ -107,7 +107,7 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/add_record_bt"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
@@ -120,12 +120,12 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.526"
-        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/status__list_add_food_bt"
         app:layout_constraintTop_toBottomOf="@+id/status_list"
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/viewFood_bt"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_margin="15dp"
@@ -137,21 +137,23 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/status__list_add_food_bt"
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/textView31"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
         android:text="Logout"
         android:textColor="@color/black"
+        android:textIsSelectable="true"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/viewFood_bt"
         app:layout_constraintVertical_bias="0.899" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
