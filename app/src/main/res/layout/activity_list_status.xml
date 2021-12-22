@@ -8,11 +8,10 @@
     tools:context=".list_status">
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/tv_hi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Hi, Mohammed"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -34,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.073"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_hi" />
 
     <TextView
         android:id="@+id/statusRate_tv"
@@ -71,10 +70,10 @@
     <ListView
         android:id="@+id/status_list"
         android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_height="280dp"
         android:layout_centerInParent="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="10dp"
         android:background="@color/custom_color"
         android:foregroundGravity="center"
@@ -141,7 +140,7 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
-        android:id="@+id/textView31"
+        android:id="@+id/logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minHeight="48dp"

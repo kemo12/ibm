@@ -7,7 +7,7 @@
     tools:context=".complete_information">
 
     <Button
-        android:id="@+id/complete_information_minus_kg_bt"
+        android:id="@+id/b_kgdec"
         android:layout_width="16dp"
         android:layout_height="25dp"
         android:background="@drawable/standblue_bt"
@@ -22,7 +22,7 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/tv_hi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -32,11 +32,11 @@
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView10"
-        app:layout_constraintStart_toEndOf="@+id/complete_information_plus_cm_bt"
+        app:layout_constraintStart_toEndOf="@+id/b2_cminc"
         app:layout_constraintTop_toTopOf="@+id/textView10" />
 
     <Button
-        android:id="@+id/complete_information_plus_cm_bt"
+        android:id="@+id/b2_cminc"
         android:layout_width="24sp"
         android:layout_height="24sp"
         android:background="@drawable/standblue_bt"
@@ -45,13 +45,13 @@
         android:textColor="@color/purple_700"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView10"
-        app:layout_constraintStart_toEndOf="@+id/cm_tv"
+        app:layout_constraintStart_toEndOf="@+id/tv_cm"
         app:layout_constraintTop_toTopOf="@+id/textView10"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
-        android:id="@+id/cm_tv"
+        android:id="@+id/tv_cm"
         android:layout_width="70sp"
         android:layout_height="24sp"
         android:background="@drawable/standblue_bt"
@@ -59,11 +59,11 @@
         android:textColor="@color/custom_color"
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView10"
-        app:layout_constraintStart_toEndOf="@+id/complete_information_mins_cm_bt"
+        app:layout_constraintStart_toEndOf="@+id/b1_cmdec"
         app:layout_constraintTop_toTopOf="@+id/textView10" />
 
     <Button
-        android:id="@+id/complete_information_mins_cm_bt"
+        android:id="@+id/b1_cmdec"
         android:layout_width="24sp"
         android:layout_height="24sp"
         android:background="@drawable/standblue_bt"
@@ -72,8 +72,8 @@
         android:textColor="@color/purple_700"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView10"
-        app:layout_constraintEnd_toEndOf="@+id/complete_information_minus_kg_bt"
-        app:layout_constraintStart_toStartOf="@+id/complete_information_minus_kg_bt"
+        app:layout_constraintEnd_toEndOf="@+id/b_kgdec"
+        app:layout_constraintStart_toStartOf="@+id/b_kgdec"
         app:layout_constraintTop_toTopOf="@+id/textView10"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="TouchTargetSizeCheck" />
@@ -182,7 +182,7 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/kg_tv"
+        android:id="@+id/tv_kg"
         android:layout_width="76dp"
         android:layout_height="24sp"
         android:background="@drawable/standblue_bt"
@@ -190,11 +190,11 @@
         android:textColor="@color/custom_color"
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView8"
-        app:layout_constraintStart_toEndOf="@+id/complete_information_minus_kg_bt"
+        app:layout_constraintStart_toEndOf="@+id/b_kgdec"
         app:layout_constraintTop_toTopOf="@+id/textView8" />
 
     <Button
-        android:id="@+id/complete_information_plus_kg_bt"
+        android:id="@+id/b2_kginc"
         android:layout_width="24sp"
         android:layout_height="24sp"
         android:background="@drawable/standblue_bt"
@@ -203,25 +203,25 @@
         android:textColor="@color/custom_color"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView8"
-        app:layout_constraintStart_toEndOf="@+id/kg_tv"
+        app:layout_constraintStart_toEndOf="@+id/tv_kg"
         app:layout_constraintTop_toTopOf="@+id/textView8"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/editText1"
         android:layout_width="130sp"
         android:layout_height="wrap_content"
         android:background="@drawable/standblue_bt"
         android:ems="10"
         android:inputType="date"
         app:layout_constraintBottom_toBottomOf="@+id/textView9"
-        app:layout_constraintStart_toStartOf="@+id/complete_information_mins_cm_bt"
+        app:layout_constraintStart_toStartOf="@+id/b1_cmdec"
         app:layout_constraintTop_toTopOf="@+id/textView9"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/completeInformation_saveData_bt"
+        android:id="@+id/save_data"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
@@ -232,7 +232,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+        app:layout_constraintTop_toBottomOf="@+id/editText1"
         app:layout_constraintVertical_bias="0.24" />
 
     <TextView
@@ -246,6 +246,6 @@
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView8"
-        app:layout_constraintStart_toEndOf="@+id/complete_information_plus_kg_bt"
+        app:layout_constraintStart_toEndOf="@+id/b2_kginc"
         app:layout_constraintTop_toTopOf="@+id/textView8" />
 </androidx.constraintlayout.widget.ConstraintLayout>

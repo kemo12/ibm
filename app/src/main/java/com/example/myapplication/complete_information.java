@@ -1,133 +1,166 @@
 package com.example.myapplication;
-
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class complete_information extends AppCompatActivity {
-Button b1 , kg_minus_bt,kg_plus_bt , cm_minus_bt , cm_plus_bt;
-int kg;
-int cm;
-TextView kg_tv, cm_tv;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_complete_information);
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 
-        b1= findViewById(R.id.completeInformation_saveData_bt);
-        kg_minus_bt = findViewById(R.id.complete_information_minus_kg_bt);
-        kg_plus_bt = findViewById(R.id.complete_information_plus_kg_bt);
-        cm_minus_bt = findViewById(R.id.complete_information_mins_cm_bt);
-        cm_plus_bt = findViewById(R.id.complete_information_plus_cm_bt);
-        kg_tv = findViewById(R.id.kg_tv);
-        cm_tv=findViewById(R.id.cm_tv);
-       kg_minus_bt.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               if (kg==0){
+import com.example.myapplication.android.saver;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
 
-                   kg=0;
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Calendar;
 
-               }
-            else{
-               kg=kg-1;
+    public class complete_information extends AppCompatActivity {
 
-               kg_tv.setText(kg+"");
-           }}
-       });
-     kg_plus_bt.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
-             kg=kg+1;
-             kg_tv.setText(kg + "");
-         }
-     });
-     cm_minus_bt.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
-             if (cm == 0)
 
-                 cm= 0;
+        public static double bmi_calc(int kg, double cm, double age) {
 
-             else {
-                 cm = cm - 1;
-                 cm_tv.setText(cm + "");
-             }
+            if (age>=2 && age<=10)
+                return (kg / Math.pow((cm / 100), 2)) * 0.7;
 
-         }
-     });
+            else
+            if (age>10 && age<=20)
+                return (kg / Math.pow((cm / 100), 2)) * 0.9;
 
-     cm_plus_bt.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
-             cm = cm +1;
-             cm_tv.setText(cm+ "");
-         }
-     });
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getBaseContext(),list_status.class);
-                startActivity(i);
+            else
+            if (age>=20)
+                return (kg / Math.pow((cm / 100), 2)) * 1;
+
+
+            return   (kg / Math.pow((cm / 100), 2)) * 1;
+        }
+        public static char userState(double b){
+
+            if (b<18.5){
+                return 'U';
             }
-        });
-      /*  kg_minus_bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (kg==0){
+            else
+            if (18.5<=b  &&  b<25){
+                return 'H';
+            }
+            else
+            if (25<=b  &&  b<30){
+                return 'O';
+            }
+            else
+            if (b>30)
+                return 'b';
 
-                    kg=0;
+            return 'b';
+        }
 
+        @RequiresApi(api = Build.VERSION_CODES.O)
+        static public int getAge(int year, int month, int dayOfMonth) {
+            return Period.between(
+                    LocalDate.of(year, month, dayOfMonth),
+                    LocalDate.now()
+            ).getYears();
+        }
+
+        FirebaseFirestore f;
+        Button b2_kginc, b1_kgdec;
+        Button b2_cminc, b1_cmdec;
+        Button save_data;
+        TextView tv_kg, tv_cm;
+        int kg = 60, cm = 100, age;
+        DatePickerDialog datepicker;
+        EditText eText;
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_complete_information);
+            b1_kgdec = findViewById(R.id.b_kgdec);
+            b2_kginc = findViewById(R.id.b2_kginc);
+            b1_cmdec = findViewById(R.id.b1_cmdec);
+            b2_cminc = findViewById(R.id.b2_cminc);
+            tv_kg = findViewById(R.id.tv_kg);
+            tv_cm = findViewById(R.id.tv_cm);
+            save_data = findViewById(R.id.save_data);
+            eText = findViewById(R.id.editText1);
+            eText.setInputType(InputType.TYPE_NULL);
+            f = FirebaseFirestore.getInstance();
+
+
+            eText.setOnClickListener(new View.OnClickListener() {
+                @RequiresApi(api = Build.VERSION_CODES.O)
+                @Override
+                public void onClick(View v) {
+                    final Calendar cldr = Calendar.getInstance();
+                    int day = cldr.get(Calendar.DAY_OF_MONTH);
+                    int month = cldr.get(Calendar.MONTH);
+                    int year = cldr.get(Calendar.YEAR);
+                    // date picker dialog
+                    datepicker = new DatePickerDialog(complete_information.this,
+                            new DatePickerDialog.OnDateSetListener() {
+                                @Override
+                                public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                                    eText.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
+                                    age = getAge(year, monthOfYear, dayOfMonth);
+                                }
+                            }, year, month, day);
+
+                    datepicker.show();
                 }
+            });
 
-                kg=kg-1;
-
-                kg_tv.setText(kg+"");
-
-            }
-        });
-        kg_plus_bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                kg=kg+1;
-
-                kg_tv.setText(kg+"");
-
-            }
-        });
-        cm_minus_bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (cm==0){
-
-                    cm=0;
-
+            b1_kgdec.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    kg = kg - 1;
+                    tv_kg.setText(kg + "");
                 }
-
-                cm = cm-1;
-
-                cm_tv.setText(kg+"");
-
-            }
-        });
-        cm_plus_bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                cm = cm+1;
-
-                cm_tv.setText(kg+"");
-
-            }
-        });
-
-*/
+            });
+            b2_kginc.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    kg = kg + 1;
+                    tv_kg.setText(kg + "");
+                }
+            });
+            b1_cmdec.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    cm = cm - 1;
+                    tv_cm.setText(cm + "");
+                }
+            });
+            b2_cminc.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    cm = cm + 1;
+                    tv_cm.setText(cm + "");
+                }
+            });
+            save_data.setOnClickListener(v -> {
+                int k = kg;
+                int c = cm;
+                saver.User.setAge(age);
+                saver.User.setBmi(bmi_calc(k, c, age));
+                f.collection("user").document(saver.User.getId()).set(saver.User).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(getBaseContext(), "The data is saved", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(getBaseContext(), list_status.class);
+                            startActivity(intent);
+                        }
+                    }
+                }).addOnFailureListener(e -> Toast.makeText(getBaseContext(), "no Internet connection", Toast.LENGTH_SHORT).show());
+            });
+        }
     }
-}
